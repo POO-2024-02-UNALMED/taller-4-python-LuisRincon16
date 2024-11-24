@@ -7,14 +7,16 @@ class Grupo:
         self._grupo = grupo
         self._asignaturas = asignaturas
         self.listadoAlumnos = estudiantes
+        
 
     def listadoAsignaturas(self, kwargs):
         for x in kwargs.values():
             self._asignaturas.append(Asignatura(x))
 
     def agregarAlumno(self, alumno, lista=[]):
+        lista = lista
         lista.append(alumno)
-        self.listadoAlumnos = self.listadoAlumnos + lista
+        self.listadoAlumnos = lista
 
     def __str__(self):
         return "Grupo de estudiantes:" + self._grupo
