@@ -5,14 +5,14 @@ class Grupo:
 
     def __init__(self, grupo="grupo predeterminado", asignaturas=None, estudiantes=None):
         self._grupo = grupo
-        #if asignaturas == None:
-        #    self._asignaturas = []
-        #else:
-        self._asignaturas = asignaturas
-        #if estudiantes == None:
-        #    self.listadoAlumnos = []
-        #else:
-        self.listadoAlumnos = estudiantes
+        if asignaturas == None:
+            self._asignaturas = []
+        else:
+            self._asignaturas = asignaturas
+        if estudiantes == None:
+            self.listadoAlumnos = []
+        else:
+            self.listadoAlumnos = estudiantes
         
 
     def listadoAsignaturas(self, **kwargs):
