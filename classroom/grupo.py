@@ -11,7 +11,7 @@ class Grupo:
 
     def listadoAsignaturas(self, **kwargs):
         self._asignaturas = []
-        for x in len(kwargs):
+        for x in kwargs.values():
             self._asignaturas.append(kwargs.get("as","valor"))
 
     def agregarAlumno(self, alumno, lista=None):
