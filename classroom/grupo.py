@@ -18,16 +18,17 @@ class Grupo:
     def listadoAsignaturas(self, **kwargs):
         self._asignaturas = []
         for key, value in kwargs.items():
-            self._asignaturas.append(getattr(self, key, value))
+            asig = Asignatura(value)
+            self._asignaturas.append(asig)
 
     def agregarAlumno(self, alumno, lista=None):
         if lista == None:
             lista = []
             lista.append(alumno)
-            self.listadoAlumnos = lista
+            self.listadoAlumnos = self.listadoAlumnos + lista
         else:
             lista.append(alumno)
-            self.listadoAlumnos = lista
+            self.listadoAlumnos = self.listadoAlumnos + lista
 
     def __str__(self):
         return "Grupo de estudiantes: " + self._grupo
