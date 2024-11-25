@@ -16,7 +16,7 @@ class Grupo:
         
 
     def listadoAsignaturas(self, **kwargs):
-        self._asignaturas = []
+        #self._asignaturas = []
         for key, value in kwargs.items():
             asig = Asignatura(value)
             self._asignaturas.append(asig)
